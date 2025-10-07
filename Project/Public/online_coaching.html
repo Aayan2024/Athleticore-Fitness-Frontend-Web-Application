@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Coaching - FitLife Club</title>
+  <style>
+    /* Reset & base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?fitness,workout') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ff3c3c;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e22a2a;
+    }
+
+    /* Features */
+    .features {
+      padding: 60px 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature-card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #eee;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 20px auto;
+      font-style: italic;
+    }
+
+    .testimonial h4 {
+      margin-top: 10px;
+      font-weight: normal;
+    }
+
+    /* CTA Section */
+    .cta {
+      background: #ff3c3c;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Online Coaching with FitLife</h1>
+      <p>Train anywhere, anytime with personalized workout and nutrition plans.</p>
+      <a href="#signup" class="btn">Get Started</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>What You Get</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Customized Workouts</h3>
+        <p>Programs tailored to your goals and fitness level.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Nutrition Guidance</h3>
+        <p>Personalized meal plans and dietary support.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Live Check-ins</h3>
+        <p>Weekly video calls with your coach to stay on track.</p>
+      </div>
+      <div class="feature-card">
+        <h3>24/7 Support</h3>
+        <p>Message your coach anytime through our app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Client Success Stories</h2>
+    <div class="testimonial">
+      <p>"I lost 20 pounds in 3 months thanks to FitLife coaching!"</p>
+      <h4>- Sarah J.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"The customized plans are exactly what I needed to stay motivated."</p>
+      <h4>- Mark T.</h4>
+    </div>
+  </section>
+
+  <section class="cta" id="signup">
+    <h2>Start Your Transformation Today</h2>
+    <a href="#" class="btn">Sign Up Now</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitLife Club. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

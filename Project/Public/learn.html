@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn - FitLife Club</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?learning,fitness') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ff6347;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e5533d;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .course-card h3 {
+      margin-top: 20px;
+      font-size: 1.8em;
+      color: #ff6347;
+    }
+
+    .course-card p {
+      margin-top: 10px;
+      font-size: 1em;
+    }
+
+    .cta {
+      background: #ff6347;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Learn & Grow with FitLife</h1>
+      <p>Empower yourself with knowledge. Explore our fitness resources, courses, and tips to enhance your journey.</p>
+      <a href="#courses" class="btn">Explore Courses</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Our Courses & Resources</h2>
+    <p>We offer a variety of courses, articles, and tutorials to help you improve your fitness knowledge and skills. Whether you're just starting or you're a seasoned fitness enthusiast, we have something for you.</p>
+
+    <div class="courses" id="courses">
+      <div class="course-card">
+        <img src="https://source.unsplash.com/400x300/?workout,trainer" alt="Personal Training" />
+        <h3>Personal Training 101</h3>
+        <p>Learn the basics of personal training and how to create customized workout plans for clients at any fitness level.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+
+      <div class="course-card">
+        <img src="https://source.unsplash.com/400x300/?nutrition,healthy-eating" alt="Nutrition" />
+        <h3>Nutrition for Fitness</h3>
+        <p>Understand the role of nutrition in fitness, and discover how to optimize your diet for performance and recovery.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+
+      <div class="course-card">
+        <img src="https://source.unsplash.com/400x300/?mindfulness,stress-relief" alt="Mindfulness & Recovery" />
+        <h3>Mindfulness & Recovery</h3>
+        <p>Learn how mindfulness and recovery techniques can enhance your fitness progress and mental well-being.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Learn More?</h2>
+    <p>Take the first step towards better fitness and health. Explore our courses, articles, and tips to begin your educational journey today.</p>
+    <a href="#courses" class="btn">Explore Now</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitLife Club. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

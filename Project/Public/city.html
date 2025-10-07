@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Selector</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Main page text (clickable) */
+        .location-text {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .location-text:hover {
+            background-color: #ff4500;
+        }
+
+        /* The city selection div */
+        .city-selector {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            width: 250px;
+            max-height: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        /* Search Bar */
+        #citySearch {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        /* City list styling */
+        .city-item {
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .city-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Styling the container for the location text and city selector */
+        .container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Location Text (clickable) -->
+        <div class="location-text" id="locationText">
+            Select City
+        </div>
+
+        <!-- City Selection Div -->
+        <div class="city-selector" id="citySelector">
+            <input type="text" id="citySearch" placeholder="Search for a city...">
+            <div id="cityList">
+                <!-- City items will be populated here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample list of cities
+        const cities = [
+            'Bangalore', 'Mumbai', 'Delhi', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune',
+            'Ahmedabad', 'Surat', 'Jaipur', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore',
+            'Patna', 'Vadodara', 'Agra', 'Meerut', 'Kochi', 'Coimbatore'
+        ];
+
+        const locationText = document.getElementById('locationText');
+        const citySelector = document.getElementById('citySelector');
+        const cityList = document.getElementById('cityList');
+        const citySearch = document.getElementById('citySearch');
+
+        // Toggle the city selector visibility
+        locationText.addEventListener('click', () => {
+            if (citySelector.style.display === 'none' || citySelector.style.display === '') {
+                citySelector.style.display = 'block';
+                populateCityList(cities); // Populate cities when the dropdown is shown
+            } else {
+                citySelector.style.display = 'none'; // Hide when clicked again
+            }
+        });
+
+        // Populate the city list dynamically
+        function populateCityList(cityArray) {
+            cityList.innerHTML = ''; // Clear any previous city items
+            cityArray.forEach(city => {
+                const cityItem = document.createElement('div');
+                cityItem.classList.add('city-item');
+                cityItem.textContent = city;
+                cityItem.addEventListener('click', () => updateCity(city)); // Update city on click
+                cityList.appendChild(cityItem);
+            });
+        }
+
+        // Update the city name in the main text
+        function updateCity(cityName) {
+            locationText.textContent = cityName;
+            citySelector.style.display = 'none'; // Hide the city selector after selection
+        }
+
+        // Search functionality for filtering cities
+        citySearch.addEventListener('input', () => {
+            const searchTerm = citySearch.value.toLowerCase();
+            const filteredCities = cities.filter(city => city.toLowerCase().includes(searchTerm));
+            populateCityList(filteredCities); // Update the city list with filtered cities
+        });
+
+        // Close the dropdown if clicking outside
+        document.addEventListener('click', (e) => {
+            if (!locationText.contains(e.target) && !citySelector.contains(e.target)) {
+                citySelector.style.display = 'none'; // Close the dropdown if clicking outside
+            }
+        });
+    </script>
+
+</body>
+</html>

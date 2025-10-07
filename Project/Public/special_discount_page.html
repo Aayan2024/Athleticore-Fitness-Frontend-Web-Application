@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Festive Discounts - Club Membership</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .discount-banner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
+      background: linear-gradient(135deg, #e0f2ff, #dbefff);
+    }
+
+    .discount-content {
+      flex: 1 1 40%;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .discount-content h2 {
+      font-size: 36px;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .discount-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .image-frames {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .image-frame {
+      background-color: #e5f4ff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .discount-sticker {
+      background-color: crimson;
+      color: white;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .benefits-section {
+      padding: 50px 10%;
+      background-color: white;
+      text-align: center;
+    }
+
+    .benefits-section h3 {
+      font-size: 32px;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .benefits-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .benefit-item {
+      background-color: #f1f9ff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .benefit-item h4 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .benefit-item p {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 10%;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .discount-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Festive Discount Section -->
+  <div class="discount-banner">
+    <!-- Left Content -->
+    <div class="discount-content">
+      <h2>Festive Season Special Discounts!</h2>
+      <p>Celebrate the festive season with exclusive discounts on our club memberships. Unlock amazing offers on our Fitness, Sports, and Community plans. Hurry up, these deals are limited!</p>
+    </div>
+
+    <!-- Right Content (Without Images) -->
+    <div class="image-frames">
+      <div class="image-frame">
+        <div class="discount-sticker">20% OFF</div>
+        <p>Fitness Plan Discount</p>
+      </div>
+      <div class="image-frame">
+        <div class="discount-sticker">15% OFF</div>
+        <p>Sports Plan Discount</p>
+      </div>
+      <div class="image-frame">
+        <div class="discount-sticker">10% OFF</div>
+        <p>Community Plan Discount</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <h3>Why Join Us During This Festive Season?</h3>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <h4>Exclusive Offers</h4>
+        <p>Enjoy limited-time discounts on premium membership plans that suit all lifestyles.</p>
+      </div>
+      <div class="benefit-item">
+        <h4>Community Access</h4>
+        <p>Be part of a vibrant community through events, workshops, and networking sessions.</p>
+      </div>
+      <div class="benefit-item">
+        <h4>Flexible Plans</h4>
+        <p>Choose from 3, 6, or 12-month memberships with flexible pause and transfer options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ClubFit. All rights reserved. | Contact us: info@clubfit.com
+  </footer>
+
+</body>
+</html>

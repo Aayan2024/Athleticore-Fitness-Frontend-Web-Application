@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMR Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .input-group select {
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>BMR Calculator</h1>
+
+        <div class="input-group">
+            <label for="age">Age (in years):</label>
+            <input type="number" id="age" placeholder="Enter your age">
+        </div>
+
+        <div class="input-group">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" placeholder="Enter your height">
+        </div>
+
+        <div class="input-group">
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+        </div>
+
+        <button onclick="calculateBMR()">Calculate BMR</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculateBMR() {
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var height = document.getElementById('height').value;
+            var weight = document.getElementById('weight').value;
+
+            if (!age || !height || !weight) {
+                alert("Please fill in all fields");
+                return;
+            }
+
+            var bmr;
+            if (gender === "male") {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5; // Mifflin-St Jeor Equation for male
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161; // Mifflin-St Jeor Equation for female
+            }
+
+            document.getElementById('result').innerHTML = "Your BMR is: " + bmr.toFixed(2) + " kcal/day";
+        }
+    </script>
+</body>
+</html>

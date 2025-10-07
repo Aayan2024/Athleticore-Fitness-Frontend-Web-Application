@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AthletiCore</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navbar styles would go here */
+        .navbar {
+            /* Your navbar styles */
+            height: 80px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer styles would go here */
+        .footer {
+            /* Your footer styles */
+            background: #222;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        /* Hero Header */
+        .hero-header {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-header p {
+            max-width: 42rem;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 4rem 1rem;
+        }
+        
+        .section-bg-1 {
+            background-color: #F2FCE2;
+        }
+        
+        .section-bg-1:hover {
+            background-color: #E8F9D6;
+        }
+        
+        .section-bg-2 {
+            background-color: #E5DEFF;
+        }
+        
+        .section-bg-2:hover {
+            background-color: #D8CEFF;
+        }
+        
+        .section-bg-3 {
+            background-color: #FDE1D3;
+        }
+        
+        .section-bg-3:hover {
+            background-color: #FBCDB8;
+        }
+        
+        .section-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-header h1 {
+                font-size: 3.75rem;
+            }
+            
+            .hero-header p {
+                font-size: 1.25rem;
+            }
+            
+            .section {
+                padding: 4rem 2rem;
+            }
+            
+            .section-content {
+                flex-direction: row;
+            }
+        }
+        
+        .section-text {
+            flex: 1;
+        }
+        
+        .section-image {
+            flex: 1;
+        }
+        
+        .section-image img {
+            width: 100%;
+            border-radius: 0.75rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .section-image img:hover {
+            transform: translateY(-0.5rem);
+        }
+        
+        .section h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        @media (min-width: 768px) {
+            .section h2 {
+                font-size: 2.25rem;
+            }
+        }
+        
+        .section p {
+            color: #374151;
+            margin-bottom: 1.25rem;
+            font-size: 1.125rem;
+            line-height: 1.75;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 0.375rem;
+            padding: 1.5rem;
+        }
+        
+        .card p {
+            font-style: italic;
+            font-weight: 600;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: color 0.3s;
+        }
+        
+        .list-item:hover {
+            color: #3b82f6;
+        }
+        
+        .list-item span:first-child {
+            font-size: 1.25rem;
+            transition: transform 0.3s;
+        }
+        
+        .list-item:hover span:first-child {
+            transform: scale(1.25);
+        }
+        
+        .list-item span:last-child {
+            font-weight: 500;
+        }
+        
+        /* Founders Section */
+        .founders-section {
+            padding: 5rem 1rem;
+            background-color: #f8fafc;
+            text-align: center;
+        }
+        
+        .founders-section h2 {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            margin-bottom: 3rem;
+        }
+        
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .founder-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .founder-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid #e0e7ff;
+        }
+        
+        .founder-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .founder-title {
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .founder-bio {
+            color: #475569;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 1rem;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+        }
+        
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Video Section */
+        .video-section {
+            padding: 5rem 1rem;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .video-section h2 {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            margin-bottom: 2rem;
+        }
+        
+        .video-section p {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #475569;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Transitions */
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        /* Order for mobile */
+        .order-1 {
+            order: 1;
+        }
+        
+        .order-2 {
+            order: 2;
+        }
+        
+        @media (min-width: 768px) {
+            .md-order-1 {
+                order: 1;
+            }
+            
+            .md-order-2 {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar would go here -->
+        <div class="navbar"></div>
+        
+        <!-- Hero Header -->
+        <header class="hero-header">
+            <div class="container">
+                <h1 class="animate-fade-in">About AthletiCore</h1>
+                <p>Empowering you through movement, community, and innovative fitness solutions</p>
+            </div>
+        </header>
+        
+        <!-- Section 1: Our Story - Left -->
+        <section class="section section-bg-1 transition-colors">
+            <div class="container section-content">
+                <div class="section-text order-2 md-order-1">
+                    <h2>Our Story</h2>
+                    <p class="font-medium">
+                        Founded with passion and powered by purpose, AthletiCore was born out of a simple idea — to make 
+                        fitness accessible, inclusive, and empowering for everyone. What began as a small fitness 
+                        group in 2023 has now grown into a thriving digital and physical community.
+                    </p>
+                    <p>
+                        Our founders, driven by a love for movement and well-being, envisioned more than just 
+                        workouts — they envisioned a lifestyle that celebrates every journey and achievement, 
+                        no matter how small.
+                    </p>
+                </div>
+                <div class="section-image order-1 md-order-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" 
+                        alt="AthletiCore Community" 
+                        class="transition-transform"
+                    />
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2: Our Mission - Right -->
+        <section class="section section-bg-2 transition-colors">
+            <div class="container section-content">
+                <div class="section-image">
+                    <img 
+                        src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=800&q=80" 
+                        alt="AthletiCore Training" 
+                        class="transition-transform"
+                    />
+                </div>
+                <div class="section-text">
+                    <h2>Our Mission</h2>
+                    <p>
+                        At AthletiCore, we're committed to providing holistic fitness experiences through expertly 
+                        designed workouts, wellness programs, and a vibrant fitness community — all in one platform.
+                    </p>
+                    <p>
+                        We believe fitness should be enjoyable, sustainable, and tailored to individual needs. That's 
+                        why we've built a platform that adapts to you, not the other way around.
+                    </p>
+                    <div class="card">
+                        <p>
+                            "To build a healthier, stronger world — one rep, one breath, one person at a time."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 3: What We Offer - Left -->
+        <section class="section section-bg-3 transition-colors">
+            <div class="container section-content">
+                <div class="section-text order-2 md-order-1">
+                    <h2>What We Offer</h2>
+                    <p>
+                        From yoga and mindfulness to high-intensity workouts and community events, 
+                        we've designed our offerings to cater to every fitness level and interest.
+                    </p>
+                    <ul class="space-y-4 mb-5">
+                        <li class="list-item">
+                            <span>🧘</span> 
+                            <span>Yoga and Mindfulness Sessions</span>
+                        </li>
+                        <li class="list-item">
+                            <span>🏃</span> 
+                            <span>High-Intensity and Functional Training</span>
+                        </li>
+                        <li class="list-item">
+                            <span>🤸‍♀️</span> 
+                            <span>Aerobics and Dance Workouts</span>
+                        </li>
+                        <li class="list-item">
+                            <span>🏀</span> 
+                            <span>Community Sports Events</span>
+                        </li>
+                        <li class="list-item">
+                            <span>👥</span> 
+                            <span>A growing fitness community that supports each other</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section-image order-1 md-order-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" 
+                        alt="AthletiCore Offerings" 
+                        class="transition-transform"
+                    />
+                </div>
+            </div>
+        </section>
+        
+        <!-- Founders Section -->
+        <section class="founders-section">
+            <div class="container">
+                <h2>Meet Our Founders</h2>
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Alex Johnson" class="founder-image">
+                        <h3 class="founder-name">Alex Johnson</h3>
+                        <p class="founder-title">CEO & Fitness Visionary</p>
+                        <p class="founder-bio">
+                            With over 15 years in the fitness industry, Alex brings unparalleled expertise in functional training and community building.
+                        </p>
+                    </div>
+                    <div class="founder-card">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Samira Khan" class="founder-image">
+                        <h3 class="founder-name">Samira Khan</h3>
+                        <p class="founder-title">CTO & Wellness Expert</p>
+                        <p class="founder-bio">
+                            Samira combines her tech background with yoga therapy certification to create our digital wellness platform.
+                        </p>
+                    </div>
+                    <div class="founder-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Marcus Chen" class="founder-image">
+                        <h3 class="founder-name">Marcus Chen</h3>
+                        <p class="founder-title">Head of Community</p>
+                        <p class="founder-bio">
+                            Former professional athlete who now focuses on making fitness accessible to underserved communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>What Our Members Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "AthletiCore transformed my approach to fitness. The community support and expert guidance helped me lose 30lbs and gain confidence I never knew I had!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jamie L.">
+                            <div class="author-info">
+                                <h4>Jamie L.</h4>
+                                <p>Member since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "As someone who hated gyms, AthletiCore's inclusive approach made me actually enjoy working out. The virtual classes are game-changers!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David R.">
+                            <div class="author-info">
+                                <h4>David R.</h4>
+                                <p>Member since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "The trainers understand real bodies and real lives. They meet you where you are and help you grow at your own pace. Life-changing!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K.">
+                            <div class="author-info">
+                                <h4>Priya K.</h4>
+                                <p>Member since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <h2>Our Community in Action</h2>
+                <p>
+                    See what makes AthletiCore different. This video captures the energy, diversity, and passion of our community.
+                </p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="AthletiCore Community Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer would go here -->
+        <div class="footer">
+            <div class="container">
+                <p>&copy; 2023 AthletiCore. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

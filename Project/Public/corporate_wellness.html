@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corporate Wellness - FitLife Club</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?office,wellness') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #007bff;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .testimonial {
+      background: #eef2f3;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto 10px auto;
+    }
+
+    .testimonial h4 {
+      margin-top: 10px;
+      font-weight: normal;
+    }
+
+    .cta {
+      background: #007bff;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Corporate Wellness by FitLife</h1>
+      <p>Empowering your employees to live healthier, happier, and more productive lives.</p>
+      <a href="#contact" class="btn">Partner with Us</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Our Corporate Wellness Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>On-site Fitness Programs</h3>
+        <p>Certified trainers deliver workouts at your workplace or virtually.</p>
+      </div>
+      <div class="card">
+        <h3>Health Workshops</h3>
+        <p>Interactive sessions on stress management, posture, and mental health.</p>
+      </div>
+      <div class="card">
+        <h3>Nutrition Counseling</h3>
+        <p>Group or 1-on-1 guidance from expert nutritionists.</p>
+      </div>
+      <div class="card">
+        <h3>Wellness Challenges</h3>
+        <p>Fun and competitive wellness campaigns to boost engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <h2>What Our Partners Say</h2>
+    <p>"FitLife helped reduce our team's stress and improve overall morale. The feedback from employees has been incredible!"</p>
+    <h4>- HR Manager, TechNova Inc.</h4>
+  </section>
+
+  <section class="cta" id="contact">
+    <h2>Bring Wellness to Your Workplace</h2>
+    <p>Let's design a custom wellness program for your team.</p>
+    <a href="#" class="btn">Contact Us</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitLife Club. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

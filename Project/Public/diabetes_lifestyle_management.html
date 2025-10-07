@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Lifestyle Management - FitLife Club</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f6f6f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?healthy,lifestyle') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #2c9b5f;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #207349;
+    }
+
+    .section {
+      padding: 60px 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .tip-card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 5px solid #2c9b5f;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .tip-card h3 {
+      margin-bottom: 10px;
+      color: #2c9b5f;
+    }
+
+    .day-plan {
+      background: #e9f5ee;
+      padding: 60px 20px;
+    }
+
+    .plan-table {
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .plan-table th, .plan-table td {
+      padding: 15px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    .plan-table th {
+      background: #2c9b5f;
+      color: white;
+    }
+
+    .cta {
+      background: #2c9b5f;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Diabetes Lifestyle Management</h1>
+      <p>Live better with expert-backed fitness, diet, and daily habits designed for diabetes care.</p>
+      <a href="#lifestyle" class="btn">Learn More</a>
+    </div>
+  </header>
+
+  <section class="section" id="lifestyle">
+    <h2>Smart Lifestyle Tips for Managing Diabetes</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>🧘‍♀️ Stay Active Daily</h3>
+        <p>Aim for at least 30 minutes of moderate exercise like walking or yoga every day to regulate blood sugar.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🥗 Eat Balanced Meals</h3>
+        <p>Focus on fiber-rich foods, lean proteins, and complex carbs to prevent spikes in blood sugar.</p>
+      </div>
+      <div class="tip-card">
+        <h3>💧 Stay Hydrated</h3>
+        <p>Drink plenty of water and limit sugary beverages and alcohol.</p>
+      </div>
+      <div class="tip-card">
+        <h3>🩺 Monitor Regularly</h3>
+        <p>Track your glucose levels, weight, and progress to stay on target.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="day-plan">
+    <h2>Sample Daily Plan for Type 2 Diabetes</h2>
+    <table class="plan-table">
+      <tr>
+        <th>Meal</th>
+        <th>What to Eat</th>
+      </tr>
+      <tr>
+        <td>Breakfast</td>
+        <td>Oats with flaxseed, berries, and unsweetened almond milk</td>
+      </tr>
+      <tr>
+        <td>Mid-Morning Snack</td>
+        <td>1 apple with a handful of almonds</td>
+      </tr>
+      <tr>
+        <td>Lunch</td>
+        <td>Grilled chicken or chickpea salad with olive oil & lemon dressing</td>
+      </tr>
+      <tr>
+        <td>Afternoon Snack</td>
+        <td>Low-fat Greek yogurt or veggie sticks with hummus</td>
+      </tr>
+      <tr>
+        <td>Dinner</td>
+        <td>Baked salmon, sautéed greens, and a small sweet potato</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="cta">
+    <h2>Need a Personalized Diabetes Plan?</h2>
+    <p>Our certified health coaches and dietitians can create a plan tailored to your needs.</p>
+    <a href="#" class="btn">Get Started</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitLife Club. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

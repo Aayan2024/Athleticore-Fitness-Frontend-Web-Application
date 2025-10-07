@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .subscriptions {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .plan {
+            background-color: white;
+            border-left: 6px solid #0077b6;
+            border-radius: 8px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .plan h2 {
+            font-size: 28px;
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .price-section {
+            margin-bottom: 15px;
+        }
+
+        .price-section .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 16px;
+        }
+
+        .price-section .new-price {
+            font-size: 22px;
+            color: #d00000;
+            font-weight: bold;
+        }
+
+        .price-section .extra-fees {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .features {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            .plan {
+                padding: 20px;
+            }
+
+            .plan h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Subscription Plans</h1>
+        <p>Transparent pricing. No hidden fees. Choose what fits your fitness goals best.</p>
+    </header>
+
+    <section class="subscriptions">
+
+        <div class="plan">
+            <h2>12-Month Premium Plan</h2>
+            <div class="price-section">
+                <p class="old-price">₹47,000</p>
+                <p class="new-price">₹14,390 <span style="font-size: 16px;">(₹1199/month*)</span></p>
+                <p class="extra-fees">+ ₹2,731 Taxes & Fees</p>
+            </div>
+            <ul class="features">
+                <li>Pause membership up to 60 days anytime</li>
+                <li>60 cross-city gym sessions included</li>
+                <li>5 complimentary swimming sessions</li>
+                <li>Free membership transfer within 90 days</li>
+                <li>Access to premium group classes</li>
+                <li>Priority customer support</li>
+                <li>Free fitness consultation & body assessment</li>
+            </ul>
+        </div>
+
+        <div class="plan">
+            <h2>6-Month Standard Plan</h2>
+            <div class="price-section">
+                <p class="old-price">₹25,000</p>
+                <p class="new-price">₹12,290 <span style="font-size: 16px;">(₹1639/month*)</span></p>
+                <p class="extra-fees">+ ₹2,318 Taxes & Fees</p>
+            </div>
+            <ul class="features">
+                <li>30 days of membership pause</li>
+                <li>30 cross-city sessions included</li>
+                <li>2 swimming sessions included</li>
+                <li>Free membership transfer within 45 days</li>
+                <li>Group workout access (non-premium)</li>
+                <li>Fitness tracker insights (basic)</li>
+            </ul>
+        </div>
+
+        <div class="plan">
+            <h2>3-Month Starter Plan</h2>
+            <div class="price-section">
+                <p class="old-price">₹14,000</p>
+                <p class="new-price">₹9,250 <span style="font-size: 16px;">(₹2313/month*)</span></p>
+                <p class="extra-fees">+ ₹1,746 Taxes & Fees</p>
+            </div>
+            <ul class="features">
+                <li>10 days of membership pause</li>
+                <li>15 cross-city sessions included</li>
+                <li>Access to 1000+ online workout videos</li>
+                <li>₹500 OFF* on cult activewear (min. cart ₹5000)</li>
+                <li>2 additional partner offers</li>
+                <li>Perfect for short-term goals or trial</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <footer>
+        &copy; 2025 FitLife. All rights reserved.
+    </footer>
+
+</body>
+</html>

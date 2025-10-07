@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1RM Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>1RM Calculator</h1>
+
+        <div class="input-group">
+            <label for="weight">Weight Lifted (in kg):</label>
+            <input type="number" id="weight" placeholder="Enter the weight you lifted">
+        </div>
+
+        <div class="input-group">
+            <label for="reps">Number of Reps:</label>
+            <input type="number" id="reps" placeholder="Enter the number of repetitions">
+        </div>
+
+        <button onclick="calculate1RM()">Calculate 1RM</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculate1RM() {
+            var weight = document.getElementById('weight').value;
+            var reps = document.getElementById('reps').value;
+
+            // Validation
+            if (!weight || !reps) {
+                alert("Please fill in both fields.");
+                return;
+            }
+
+            // 1RM Calculation using the Epley formula:
+            // 1RM = Weight * (1 + 0.0333 * Reps)
+            var oneRM = weight * (1 + 0.0333 * reps);
+
+            // Display the result
+            document.getElementById('result').innerHTML = `
+                <p>Your estimated 1RM is: ${oneRM.toFixed(2)} kg</p>
+            `;
+        }
+    </script>
+</body>
+</html>

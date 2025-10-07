@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AthletiCore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="home(own).css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home(own).html" class="logo">AthletiCore</a>
+        <div class="nav-links">
+            <a href="Workout.html">Fitness</a>
+            <a href="Sports.html">Sports</a>
+            <a href="community.html">Community</a>
+            <a href="https://cultstore.com/?utm_source=google&utm_medium=pmax&utm_campaign=PMax_Cultstore_Apparel_Shopping_31Jan25&utm_term=&device=c&utm_matchtype=&utm_network=x&utm_placement=&utm_content=&utm_Adposition=&utm_location=9061997&utm_Sitelink=}&utm_Audience=&utm_campaignid=22182851921&utm_adgroupid=&gad_source=1&gad_campaignid=22182853394&gbraid=0AAAAAofSwy3-4rme70a5lMI591s8IAPGM&gclid=EAIaIQobChMIq-2msNa0jQMVQRiDAx1lSTLaEAAYASAAEgK5fPD_BwE">Store</a>
+            <a href="about_us.html">About Us</a>
+        </div>
+        <div class="extra-links">
+            <div class="location-tag" id="locationTag">
+                Bangalore 
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <button class="get-app-btn" id="getAppBtn">
+                <i class="fas fa-mobile-alt"></i> Get App
+            </button>
+            <button class="login-btn" title="Login/Sign Up">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Dropdown for City Selection -->
+    <div class="city-dropdown" id="cityDropdown">
+        <input type="text" id="citySearch" placeholder="Search for a city...">
+        <div id="cityList">
+            <!-- City items will be populated dynamically here -->
+        </div>
+    </div>
+
+    <!-- Banner Section with Video Background -->
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="bgvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="banner-content">
+            <h1>AthletiCore</h1>
+            <p>Your ultimate destination for fitness, sports, and community</p>
+            <a href="subscription_page.html" target="_blank" class="register-btn">Register Now</a>
+        </div>
+    </div>
+
+    <!-- Subscription Section -->
+    <div class="subscription-section">
+        <!-- Subscription Card 1 -->
+        <div class="subscription-card" onclick="window.location.href='subscription1.html';">
+            <div class="card-header">
+                <div class="left">
+                    <p class="time-period">12</p>
+                    <p class="month-text">MONTHS</p>
+                </div>
+                <div class="right">
+                    <p class="old-price">&#8377;47000</p>
+                    <div class="new-price"><p>&#8377;14390</p><span class="per-month-price">(1199/mo*)</span></div>
+                    <p class="extra-price">+ &#8377;2731 Taxes & Fees</p>
+                </div>
+            </div>
+            <div class="divider-line"></div>
+            <div class="card-body">
+                <ul class="details">
+                    <li>60 days of membership pause</li>
+                    <li>Access 60 sessions in other cities</li>
+                    <li>5 swimming sessions</li>
+                    <li>Free membership transfer within 90 days</li>
+                    <li>2 more offers</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="subscription_page.html" target="_blank" class="buy-now-btn" onclick="event.stopPropagation();">BUY NOW</a>
+            </div>
+
+        </div>
+
+        <!-- Subscription Card 2 -->
+        <div class="subscription-card" onclick="window.location.href='subscription2.html';">
+            <div class="card-header">
+                <div class="left">
+                    <p class="time-period">6</p>
+                    <p class="month-text">MONTHS</p>
+                </div>
+                <div class="right">
+                    <p class="old-price">&#8377;25000</p>
+                    <div class="new-price"><p>&#8377;12290</p><span class="per-month-price">(1639/mo*)</span></div>
+                    <p class="extra-price">+ &#8377;2318 Taxes & Fees</p>
+                </div>
+            </div>
+            <div class="divider-line"></div>
+            <div class="card-body">
+                <ul class="details">
+                    <li>30 days of membership pause</li>
+                    <li>Access 30 sessions in other cities</li>
+                    <li>2 swimming sessions</li>
+                    <li>Free membership transfer within 45 days</li>
+                    <li>3 more offers</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="subscription_page.html" target="_blank" class="buy-now-btn" onclick="event.stopPropagation();">BUY NOW</a>
+            </div>
+        </div>
+
+        <!-- Subscription Card 3 -->
+        <div class="subscription-card" onclick="window.location.href='subscription3.html';">
+            <div class="card-header">
+                <div class="left">
+                    <p class="time-period">3</p>
+                    <p class="month-text">MONTHS</p>
+                </div>
+                <div class="right">
+                    <p class="old-price">&#8377;14000</p>
+                    <div class="new-price"><p>&#8377;9250</p><span class="per-month-price">(2313/mo*)</span></div>
+                    <p class="extra-price">+ &#8377;1746 Taxes & Fees</p>
+                </div>
+            </div>
+            <div class="divider-line"></div>
+            <div class="card-body">
+                <ul class="details">
+                    <li>10 days of membership pause</li>
+                    <li>Access 15 sessions in other cities</li>
+                    <li>1000+ workout videos</li>
+                    <li>$500 OFF* on cult activewear<br>(on min. cart value of $5000)</li>
+                    <li>2 more offers</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="subscription_page.html" target="_blank" class="buy-now-btn" onclick="event.stopPropagation();">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Discount Banner -->
+    <div class="discount-banner">
+        <!-- Left Content (Text) -->
+        <div class="discount-content">
+            <h2>Festive Season Special Discounts!</h2>
+            <p>Celebrate the festive season with exclusive discounts on our club memberships. Unlock amazing offers on our Fitness, Sports, and Community plans. Hurry up, these deals are limited!</p>
+            <a href="special_discount_page.html" class="more-details-btn" target="_blank">Learn More</a>
+        </div>
+        <!-- Right Content (Images) -->
+        <div class="image-frames">
+            <div class="image-frame">
+                <img src="fitness.jpg" alt="Fitness Image">
+                <div class="discount-sticker">20% OFF</div>
+            </div>
+            <div class="image-frame">
+                <img src="sports.jpg" alt="Sports Image">
+                <div class="discount-sticker">15% OFF</div>
+            </div>
+            <div class="image-frame">
+                <img src="community.jpg" alt="Community Image">
+                <div class="discount-sticker">10% OFF</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join the Community Section -->
+    <div class="community-section">
+        <div class="community-content">
+            <h2>Join Our Fitness Community</h2>
+            <p>Connect with like-minded individuals, stay motivated, and achieve your fitness goals with the support of our growing community.</p>
+            <a href="community_extra_page.html" class="join-community-btn" target="_blank">Join Now</a>
+        </div>
+        <div class="community-image">
+            <img src="community1.jpg" alt="Community Image">
+        </div>
+    </div>
+
+    <!-- Flash Deal Section -->
+    <section class="join-win-section">
+        <div class="contest-card">
+          <div class="contest-image">
+            <img src="scratch_card.jpg" alt="Win a Prize">
+          </div>
+          <div class="contest-content">
+            <h2>🎁 Join & Win!</h2>
+            <p>Sign up this month and enter to <strong>WIN a free personal training session</strong> or a gym swag kit!</p>
+            <a href="https://www.national-lottery.co.uk/games/gamestore/scratchcards" class="contest-btn" target="_blank">Click Here!</a>
+          </div>
+        </div>
+    </section>      
+
+    <!-- Trainer Spotlight Section -->
+    <section class="trainer-spotlight">
+        <div class="trainer-card">
+          <div class="trainer-image">
+            <img src="trainer_of_the_month.jpg" alt="Trainer of the Month">
+          </div>
+          <div class="trainer-details">
+            <h2>🌟 Trainer of the Month</h2>
+            <h3>Alex Rivera</h3>
+            <p>"Push beyond limits — the only bad workout is the one that didn’t happen."</p>
+            <ul class="trainer-tags">
+              <li>Strength Training</li>
+              <li>HIIT Coach</li>
+              <li>Rated ★4.9</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer Section -->
+    <div class="main-footer">
+        <div class="footer">
+            <!-- Left Column -->
+            <div class="footer-left">
+                <h3>AthletiCore</h3>
+                <p>Your go-to destination for fitness, sports, and community building. Achieve your goals with us and stay fit for life.</p>
+                <br>
+                <div class="email-btn">
+                    <button class="contact-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                    </button>
+                    <a>support@athleticore.com</a>
+                </div>
+                <div class="email-btn">
+                    <button class="contact-btn">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+                    <a>08888003430</a>
+                </div>
+                <br>
+                <div class="media-btn-div">
+                    <a href="https://www.facebook.com/wearecultofficial/" target="_blank">
+                        <button class="media-btn">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                    </a>                    
+                    <a href="https://www.instagram.com/cult.bangalore/" target="_blank">
+                        <button class="media-btn">
+                            <i class="fa-brands fa-instagram"></i>
+                        </button>
+                    </a>
+                    
+                    <a href="https://x.com/we_are_cult" target="_blank">
+                        <button class="media-btn">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </button>
+                    </a>
+                    
+                    <a href="https://in.linkedin.com/company/cult.fit?trk=similar-pages" target="_blank">
+                        <button class="media-btn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@cult.official" target="_blank">
+                        <button class="media-btn">
+                            <i class="fa-brands fa-youtube"></i>
+                        </button>
+                    </a>                    
+                </div>
+                <br><br>
+                <div class="download-btn" id="playstore-download">
+                    <a href="https://play.google.com/store/search?q=cult%20fit&c=apps&hl=en" target="_blank">
+                        <button>
+                            <img src="playstore.png" alt="playstore download" style="height: 44px;">
+                        </button>
+                    </a>                    
+                    <a href="https://apps.apple.com/in/app/cult-fit-health-fitness-gyms/id1217794588" target="_blank">
+                        <button>
+                            <img src="appstore.png" alt="appstore download" style="height: 44px;">
+                        </button>
+                    </a>                    
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="footer-right">
+                <div>
+                    <h4>Company</h4>
+                    <a href="about_us.html">About Us</a>
+                    <a href="become_a_coach.html" target="_blank">Become a Coach</a>
+                    <a href="help&support.html" target="_blank">Help & Support</a>
+                    <a href="contact_us.html" target="_blank">Contact Us</a>
+                    <a href="learn.html" target="_blank">Learn</a>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <a href="online_coaching.html" target="_blank">Online Coaching</a>
+                    <a href="corporate_wellness.html" target="_blank">Corporate Wellness</a>
+                    <a href="fitness&nutrition_courses.html" target="_blank">Fitness & Nutrition Courses</a>
+                    <a href="weight_loss_diet_plan.html" target="_blank">Weight Loss Diet Plan</a>
+                    <a href="diabetes_lifestyle_management.html" target="_blank">Diabetes Lifestyle Management</a>
+                </div>
+                <div>
+                    <h4>Tools</h4>
+                    <a href="bmr_calculator.html" target="_blank">BMR Calculator</a>
+                    <a href="macro_calculator.html" target="_blank">Macro Calculator</a>
+                    <a href="bodyfat_calculator.html" target="_blank">Body Fat Calculator</a>
+                    <a href="1rm_calculator.html" target="_blank">1RM Calculator</a>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <a href="terms&conditions.html" target="_blank">Terms & Conditions</a>
+                    <a href="privacy_policy.html" target="_blank">Privacy Policy</a>
+                    <a href="warranty_policy.html" target="_blank">Warranty Policy</a>
+                    <a href="return&refund_policy.html" target="_blank">Return & Refund Policy</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <p id="copyright"><i class="fa-regular fa-copyright"></i> 2024. All rights reserved</p>
+        <br>
+        <br>
+    </div>
+
+
+
+<!-- Blurred Overlay -->
+<div id="modalOverlay" class="modal-overlay hidden"></div>
+
+<!-- Login/Signup Modal -->
+<div id="authModal" class="auth-modal hidden">
+  <div class="auth-tabs">
+    <button class="auth-tab active" onclick="switchTab('login')">Login</button>
+    <button class="auth-tab" onclick="switchTab('signup')">Sign Up</button>
+  </div>
+  <div class="auth-content">
+    <!-- No close button here -->
+
+    <!-- Login Form -->
+    <div id="loginForm" class="auth-form">
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button class="submit-auth" onclick="handleLogin()">Login</button>
+      <p id="loginMessage"></p>
+      <p>or connect with</p>
+      <div class="social-icons">
+        <ion-icon name="logo-google"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="mail-outline"></ion-icon>
+      </div>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signupForm" class="auth-form hidden">
+      <input type="text" id="signupUsername" placeholder="Choose a username" required />
+      <input type="password" id="signupPassword" placeholder="Create a password" required />
+      <button class="submit-auth" onclick="handleSignup()">Sign Up</button>
+      <p id="signupMessage"></p>
+      <p>or connect with</p>
+      <div class="social-icons">
+        <ion-icon name="logo-google"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="mail-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script>
+        // Scroll to the 'playstore-download' section when the "Get App" button is clicked
+document.getElementById('getAppBtn').addEventListener('click', function () {
+    document.getElementById('playstore-download').scrollIntoView({
+        behavior: 'smooth' // Smooth scroll effect
+    });
+});
+
+// List of city names for dropdown
+const cities = [
+    'Bangalore', 'Mumbai', 'Delhi', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune',
+    'Ahmedabad', 'Surat', 'Jaipur', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore',
+    'Patna', 'Vadodara', 'Agra', 'Meerut', 'Kochi', 'Coimbatore'
+];
+
+// DOM elements for location dropdown
+const locationTag = document.getElementById('locationTag'); // The clickable location element
+const cityDropdown = document.getElementById('cityDropdown'); // The dropdown container
+const cityList = document.getElementById('cityList'); // The list where city names appear
+const citySearch = document.getElementById('citySearch'); // The input box to search cities
+
+// Toggle the dropdown when location text is clicked
+locationTag.addEventListener('click', () => {
+    if (cityDropdown.style.display === 'none' || cityDropdown.style.display === '') {
+        cityDropdown.style.display = 'block'; // Show dropdown
+        populateCityList(cities); // Populate with city names
+    } else {
+        cityDropdown.style.display = 'none'; // Hide dropdown
+    }
+});
+
+// Create and display city list items dynamically
+function populateCityList(cityArray) {
+    cityList.innerHTML = ''; // Clear previous items
+    cityArray.forEach(city => {
+        const cityItem = document.createElement('div'); // Create a new div for each city
+        cityItem.classList.add('city-item'); // Add class for styling
+        cityItem.textContent = city; // Set city name as text
+        cityItem.addEventListener('click', () => updateCity(city)); // Set click action to update city
+        cityList.appendChild(cityItem); // Add to the city list
+    });
+}
+
+// Update the selected city name in the UI
+function updateCity(cityName) {
+    locationTag.textContent = cityName + ' '; // Update text content with selected city
+    locationTag.innerHTML += '<i class="fas fa-map-marker-alt"></i>'; // Add location icon
+    cityDropdown.style.display = 'none'; // Hide the dropdown
+}
+
+// Filter cities based on user input in the search box
+citySearch.addEventListener('input', () => {
+    const searchTerm = citySearch.value.toLowerCase(); // Get lowercase search term
+    const filteredCities = cities.filter(city => city.toLowerCase().includes(searchTerm)); // Filter matching cities
+    populateCityList(filteredCities); // Display filtered list
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (e) => {
+    if (!locationTag.contains(e.target) && !cityDropdown.contains(e.target)) {
+        cityDropdown.style.display = 'none'; // Hide dropdown on outside click
+    }
+});
+
+// ===== Sign Up & Login Modal =====
+
+// Get modal and form elements
+const authModal = document.getElementById('authModal'); // Main auth modal
+const modalOverlay = document.getElementById('modalOverlay'); // Background overlay
+const loginForm = document.getElementById('loginForm'); // Login form
+const signupForm = document.getElementById('signupForm'); // Signup form
+const tabs = document.querySelectorAll('.auth-tab'); // Login/Signup tab buttons
+
+// Show or hide the modal with transitions
+function toggleAuthModal() {
+  if (!authModal.classList.contains('show')) { // If modal is hidden
+    authModal.classList.remove('hidden'); // Unhide modal
+    modalOverlay.classList.remove('hidden'); // Unhide overlay
+
+    requestAnimationFrame(() => {
+      authModal.classList.add('show'); // Add animation class
+      modalOverlay.classList.add('show'); // Add animation to overlay
+    });
+  } else {
+    authModal.classList.remove('show'); // Hide animation
+    modalOverlay.classList.remove('show'); // Hide overlay animation
+
+    setTimeout(() => {
+      authModal.classList.add('hidden'); // Fully hide after animation
+      modalOverlay.classList.add('hidden'); // Fully hide overlay
+    }, 400); // Wait for animation to finish
+  }
+}
+
+// Close modal when clicking outside the modal content
+modalOverlay.addEventListener('click', toggleAuthModal);
+
+// Switch between Login and Sign Up forms
+function switchTab(tab) {
+  if (tab === 'login') {
+    loginForm.classList.remove('hidden'); // Show login form
+    signupForm.classList.add('hidden'); // Hide signup form
+    tabs[0].classList.add('active'); // Activate login tab
+    tabs[1].classList.remove('active'); // Deactivate signup tab
+  } else {
+    loginForm.classList.add('hidden'); // Hide login form
+    signupForm.classList.remove('hidden'); // Show signup form
+    tabs[0].classList.remove('active'); // Deactivate login tab
+    tabs[1].classList.add('active'); // Activate signup tab
+  }
+}
+
+// Send signup request to server
+async function handleSignup() {
+  const username = document.getElementById('signupUsername').value; // Get signup username
+  const password = document.getElementById('signupPassword').value; // Get signup password
+  const res = await fetch('/signup', { // Send POST request to server
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }, // JSON body
+    body: JSON.stringify({ username, password }) // Send credentials
+  });
+  const data = await res.json(); // Parse response
+  document.getElementById('signupMessage').innerText = data.message; // Show server message
+}
+
+// Send login request to server
+async function handleLogin() {
+  const username = document.getElementById('loginUsername').value; // Get login username
+  const password = document.getElementById('loginPassword').value; // Get login password
+  const res = await fetch('/login', { // Send POST request to login route
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }, // Set JSON content
+    body: JSON.stringify({ username, password }) // Send credentials
+  });
+  const data = await res.json(); // Parse response
+  document.getElementById('loginMessage').innerText = data.message; // Show login message
+
+  if (data.success) { // If login is successful
+    setTimeout(() => {
+      toggleAuthModal(); // Close modal after 1 second
+    }, 1000);
+  }
+}
+
+// Open the login/signup modal when login button is clicked
+document.querySelector('.login-btn').addEventListener('click', toggleAuthModal);
+
+    </script>
+</body>
+</html>

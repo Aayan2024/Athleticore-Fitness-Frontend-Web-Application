@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Macro Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .input-group select {
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .result p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Macro Calculator</h1>
+
+        <div class="input-group">
+            <label for="age">Age (in years):</label>
+            <input type="number" id="age" placeholder="Enter your age">
+        </div>
+
+        <div class="input-group">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" placeholder="Enter your height">
+        </div>
+
+        <div class="input-group">
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+        </div>
+
+        <div class="input-group">
+            <label for="activity">Activity Level:</label>
+            <select id="activity">
+                <option value="sedentary">Sedentary (little or no exercise)</option>
+                <option value="light">Lightly Active (light exercise 1-3 days/week)</option>
+                <option value="moderate">Moderately Active (moderate exercise 3-5 days/week)</option>
+                <option value="active">Very Active (hard exercise 6-7 days/week)</option>
+                <option value="extra">Extra Active (very hard exercise, physical job or training twice a day)</option>
+            </select>
+        </div>
+
+        <button onclick="calculateMacros()">Calculate Macros</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function calculateMacros() {
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var height = document.getElementById('height').value;
+            var weight = document.getElementById('weight').value;
+            var activity = document.getElementById('activity').value;
+
+            if (!age || !height || !weight) {
+                alert("Please fill in all fields");
+                return;
+            }
+
+            // Calculate BMR using Mifflin-St Jeor Equation
+            var bmr;
+            if (gender === "male") {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5; // For male
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161; // For female
+            }
+
+            // Adjust BMR based on activity level
+            var tdee;
+            if (activity === "sedentary") {
+                tdee = bmr * 1.2;
+            } else if (activity === "light") {
+                tdee = bmr * 1.375;
+            } else if (activity === "moderate") {
+                tdee = bmr * 1.55;
+            } else if (activity === "active") {
+                tdee = bmr * 1.725;
+            } else {
+                tdee = bmr * 1.9;
+            }
+
+            // Calculate Macros
+            var protein = weight * 2; // 2g of protein per kg of body weight
+            var fats = tdee * 0.25 / 9; // 25% of TDEE from fats
+            var carbs = (tdee - (protein * 4 + fats * 9)) / 4; // Remaining calories from carbs
+
+            // Display Results
+            document.getElementById('result').innerHTML = `
+                <p>Your Total Daily Energy Expenditure (TDEE): ${tdee.toFixed(2)} kcal/day</p>
+                <p>Protein: ${protein.toFixed(2)} g/day</p>
+                <p>Fats: ${fats.toFixed(2)} g/day</p>
+                <p>Carbs: ${carbs.toFixed(2)} g/day</p>
+            `;
+        }
+    </script>
+</body>
+</html>

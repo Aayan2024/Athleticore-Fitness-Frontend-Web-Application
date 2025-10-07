@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Button</title>
+    <style>
+/* Reset some basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1; /* Light gray background for contrast */
+}
+
+/* Style for the button */
+.blue-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff; /* White text color */
+    background: linear-gradient(45deg, #4169E1, #1E3A8A); /* Gradient from Royal Blue to Dark Blue */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transform and background color transition */
+}
+
+/* Hover effect */
+.blue-button:hover {
+    background: linear-gradient(45deg, #1E3A8A, #4682B4); /* Change gradient on hover */
+    transform: scale(1.1); /* Slightly scale up the button */
+}
+
+/* Active (click) effect */
+.blue-button:active {
+    background: linear-gradient(45deg, #4682B4, #4169E1); /* Change gradient when clicked */
+    transform: scale(1); /* Return to normal scale when clicked */
+}
+
+    </style>
+</head>
+<body>
+    <button class="blue-button">Click Me</button>
+</body>
+</html>
