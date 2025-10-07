@@ -1,9 +1,9 @@
 # Athleticore Fitness Tracking Web App
 
-**Athleticore** is a responsive web application designed for fitness tracking. Built using **HTML**, **CSS**, and **JavaScript**, it helps users log workouts, monitor their fitness progress, and analyze basic workout data. The app mimics backend functionality using **Node.js**, simulating user sessions and database interactions to offer a seamless experience.
+**Athleticore** is a responsive web application designed as a fitness website. Built using **HTML**, **CSS**, and **JavaScript**, it helps users look for different types of workout plans, go thorugh festive offers and check out different sports. The app mimics backend functionality using **Node.js**, simulating user sessions and database interactions to offer a seamless experience.
 
 ## Features
-- **Responsive Design**: The app is fully responsive, providing a smooth experience across desktop and mobile devices.
+- **Responsive Design**: The app is fully responsive.
 - **Simulated Backend**: Node.js mimics backend operations, handling user sessions and simulating database interactions for a dynamic experience.
 - **RESTful Structure**: API structure allows easy integration with external services or future enhancements.
 - **User Experience**: Focused on providing a simple, intuitive UI to ensure users stay motivated in tracking their fitness journey.
